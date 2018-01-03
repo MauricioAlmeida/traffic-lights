@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
+
+        turnAllLightsOff();
+
         if (v == redButton) {
             turnOnRedLight();
         } else if (v == yellowButton) {
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         } else if (v == greenButton) {
             turnOnGreenLight();
         }
+    }
+
+    private void turnAllLightsOff() {
+        redLight.setImageResource(R.drawable.light_off);
+        yellowLight.setImageResource(R.drawable.light_off);
+        greenLight.setImageResource(R.drawable.light_off);
     }
 
     private void turnOnRedLight() {
